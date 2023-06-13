@@ -1,0 +1,8 @@
+  .mrn-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .mrn-value {
+    display: inline;
+  }

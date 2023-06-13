@@ -1,0 +1,8 @@
+.plus-icon {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .list-group-item:hover .plus-icon {
+    opacity: 1;
+  }

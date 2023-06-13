@@ -1,0 +1,46 @@
+<div >
+                                   
+    <nav  class="navbar navbar-expand-lg navbar-dark bg-black fixed-right" style="height: 80vh; color: black;">
+      
+      <div class="accordion accordion-flush mb-auto " id="accordionFlushExample">
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Tasks
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse bg-black " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="width: 240px">
+            
+            <ul *ngFor="let i of taskData" class="list-group list-unstyled" >
+              <li class="list-group-item bg-black text-white">{{i.taskDescription}} <button (click)="assignTask(i.taskId)" class="btn btn-sm text-white position-absolute mx-2 end-0 plus-icon">+</button></li>
+              <hr style="border-top: 1px solid white; margin: 1rem 0 ; width: 240px;">
+            </ul>
+          
+
+          </div>
+        </div>
+        <div class="accordion-item bg-black">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="False" aria-controls="flush-collapseTwo" style="width: 240px;">
+              Task Sets
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse bg-black" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            
+            <ul *ngFor="let i of taskSetsData" class="list-group bg-black">
+              
+              <li class="list-group-item bg-black text-white">{{i.name}} <button (click)="assignTaskSets(i.id)" class="btn btn-sm text-white position-absolute mx-2 end-0 plus-icon">+</button></li>
+              <hr style="border-top: 1px solid white; margin: 1rem 0;">
+
+            </ul>
+
+
+          </div>
+        </div>
+
+      </div>
+      
+    </nav>
+  
+  
+</div>
